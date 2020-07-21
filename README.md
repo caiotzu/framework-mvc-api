@@ -102,7 +102,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
           }
         ]
         
--> Retorna um usuário passando o {id}
+-> Retorna um usuário
 
     link: {base_url}/api/users/{id}
     method: GET
@@ -119,7 +119,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
     
 -> Grava um usuário
 
-    link: {base_url}/api/users/{id}
+    link: {base_url}/api/users
     method: POST
     header: 
         Content-Type : Content-Type
@@ -137,5 +137,45 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
           "cep": "17500000",
           "number": "123"
         }
+        
+-> Atualiza um usuário
+
+    link: {base_url}/api/users/{id}
+    method: PUT
+    header: 
+        Content-Type : Content-Type
+        Accept: application/json
+    send: 
+        {
+            "name" : "Usuario 33",
+            "cep" : "17500000",
+            "number": "111"
+        }
+    return:
+        {
+          "id": 3,
+          "name": "Usuario 33",
+          "cep": "17500000",
+          "number": "111"
+        }
+        
+-> Exclui um usuário
+
+    link: {base_url}/api/users/{id}
+    method: DELETE
+    header: 
+        Content-Type : Content-Type
+        Accept: application/json
+    return: []
+    
+ -> Padrão de retorno de erro
+ 
+    {
+      "title": "Erro",
+      "msg": "mensagem de erro"
+    }
+
+
+
 
 
