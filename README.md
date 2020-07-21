@@ -79,3 +79,22 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
 ## API
+-> Retorna todos os usuários
+
+    link: {base_url}/api/users
+    retorno: 
+        [
+          {
+            "id": 1,
+            "name": "Usuario 1",
+            "cep": "17500020",
+            "number": "277"
+          },
+          {
+            "id": 2,
+            "name": "Usuario 2",
+            "cep": "17500020",
+            "number": "123"
+          }
+        ]
+        
