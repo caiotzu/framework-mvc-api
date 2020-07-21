@@ -9,8 +9,8 @@
 
 
 # API
-### Usuário
--> Retorna todos os usuários
+## Usuário
+### Retorna todos os usuários
 
     link: {base_url}/api/users
     method: GET
@@ -33,7 +33,7 @@
           }
         ]
         
--> Retorna um usuário
+### Retorna um usuário
 
     link: {base_url}/api/users/{id}
     method: GET
@@ -48,7 +48,7 @@
       "number": "123"
     }
     
--> Grava um usuário
+### Grava um usuário
 
     link: {base_url}/api/users
     method: POST
@@ -69,7 +69,7 @@
           "number": "123"
         }
         
--> Atualiza um usuário
+### Atualiza um usuário
 
     link: {base_url}/api/users/{id}
     method: PUT
@@ -90,7 +90,7 @@
           "number": "111"
         }
         
--> Exclui um usuário
+### Exclui um usuário
 
     link: {base_url}/api/users/{id}
     method: DELETE
@@ -99,15 +99,15 @@
         Accept: application/json
     return: {}
     
- -> Padrão de retorno de erro
+### Padrão de retorno de erro
     
     {
       "title": "Erro",
       "msg": "mensagem de erro"
     }
 
-### Pet
--> Retorna todos os Pets
+## Pet
+### Retorna todos os Pets
 
     link: {base_url}/api/pets
     method: GET
@@ -142,6 +142,7 @@
             }
           }
         ]
+### Retorna um pet
 
 
 
