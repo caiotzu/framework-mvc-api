@@ -8,8 +8,8 @@
 </p>
 
 
-## API
-# Usuário
+# API
+### Usuário
 -> Retorna todos os usuários
 
     link: {base_url}/api/users
@@ -106,7 +106,7 @@
       "msg": "mensagem de erro"
     }
 
-# Pet
+### Pet
 -> Retorna todos os Pets
 
     link: {base_url}/api/pets
