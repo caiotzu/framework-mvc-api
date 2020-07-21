@@ -9,6 +9,7 @@
 
 
 ## API
+# Usuário
 -> Retorna todos os usuários
 
     link: {base_url}/api/users
@@ -96,16 +97,51 @@
     header: 
         Content-Type : Content-Type
         Accept: application/json
-    return: []
+    return: {}
     
  -> Padrão de retorno de erro
- 
+    
     {
       "title": "Erro",
       "msg": "mensagem de erro"
     }
 
+# Pet
+-> Retorna todos os Pets
 
+    link: {base_url}/api/pets
+    method: GET
+    header: 
+        Content-Type : Content-Type
+        Accept: application/json
+    return: 
+        [
+       [
+          {
+            "id": 1,
+            "name": "Rex",
+            "descricao": "Husky siberiano",
+            "age": 5,
+            "user": {
+              "id": 1,
+              "name": "Usuario 1",
+              "cep": "17500020",
+              "number": "277"
+            }
+          },
+          {
+            "id": 2,
+            "name": "Thor",
+            "descricao": "Pitbull",
+            "age": 8,
+            "user": {
+              "id": 2,
+              "name": "Usuario 2",
+              "cep": "17500000",
+              "number": "123"
+            }
+          }
+        ]
 
 
 
