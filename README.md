@@ -193,5 +193,49 @@
           }
         }
 
+#### Atualiza um pet
 
+    link: {base_url}/api/pets/{id}
+    method: PUT
+    header: 
+        Content-Type : Content-Type
+        Accept: application/json
+    send:
+        {
+            "name" : "Marlei",
+            "descricao" : "Pastor Alemão",
+            "age" : 2,
+            "users_id": 1
+        }
+    return:
+        {
+          "id": 3,
+          "name": "Marlei",
+          "descricao": "Pastor Alemão",
+          "age": 2,
+          "user": {
+            "id": 1,
+            "name": "Usuario 1",
+            "cep": "17500000",
+            "number": "277"
+          }
+        }
+
+#### Exclui um pet
+    link: {base_url}/api/pets/{id}
+    method: DELETE
+    header: 
+        Content-Type : Content-Type
+        Accept: application/json
+    return: {}
+
+#### Padrão de retorno de erro
+    
+    {
+      "title": "Erro",
+      "msg": "mensagem de erro"
+    }
+
+    
+    
 
