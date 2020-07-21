@@ -11,7 +11,7 @@
 # API
 
 ## Usuário
-### Retorna todos os usuários
+#### Retorna todos os usuários
 
     link: {base_url}/api/users
     method: GET
@@ -34,7 +34,7 @@
           }
         ]
         
-### Retorna um usuário
+#### Retorna um usuário
 
     link: {base_url}/api/users/{id}
     method: GET
@@ -49,7 +49,7 @@
       "number": "123"
     }
     
-### Grava um usuário
+#### Grava um usuário
 
     link: {base_url}/api/users
     method: POST
@@ -70,7 +70,7 @@
           "number": "123"
         }
         
-### Atualiza um usuário
+#### Atualiza um usuário
 
     link: {base_url}/api/users/{id}
     method: PUT
@@ -91,7 +91,7 @@
           "number": "111"
         }
         
-### Exclui um usuário
+#### Exclui um usuário
 
     link: {base_url}/api/users/{id}
     method: DELETE
@@ -100,7 +100,7 @@
         Accept: application/json
     return: {}
     
-### Padrão de retorno de erro
+#### Padrão de retorno de erro
     
     {
       "title": "Erro",
@@ -109,7 +109,7 @@
 
 
 ## Pet
-#### Retorna todos os Pets
+##### Retorna todos os Pets
 
     link: {base_url}/api/pets
     method: GET
@@ -144,7 +144,54 @@
             }
           }
         ]
-### Retorna um pet
+#### Retorna um pet
+
+    link: {base_url}/api/pets/{id}
+    method: GET
+    header: 
+        Content-Type : Content-Type
+        Accept: application/json
+    return: 
+        {
+          "id": 1,
+          "name": "Rex",
+          "descricao": "Husky siberiano",
+          "age": 5,
+          "user": {
+            "id": 1,
+            "name": "Usuario 1",
+            "cep": "17500020",
+            "number": "277"
+          }
+        }
+        
+ #### Grava um pet
+ 
+    link: {base_url}/api/pets
+    method: POST
+    header: 
+        Content-Type : Content-Type
+        Accept: application/json
+    send:
+        {
+            "name" : "Aika",
+            "descricao" : "Pitbull",
+            "age" : 2,
+            "users_id": 1
+        }
+    return: 
+        {
+          "id": 3,
+          "name": "Aika",
+          "descricao": "Pitbull",
+          "age": 2,
+          "user": {
+            "id": 1,
+            "name": "Usuario 1",
+            "cep": "17500000",
+            "number": "277"
+          }
+        }
 
 
 
