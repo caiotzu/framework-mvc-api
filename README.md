@@ -9,6 +9,7 @@
 
 
 # API
+
 ## Usuário
 ### Retorna todos os usuários
 
@@ -106,8 +107,9 @@
       "msg": "mensagem de erro"
     }
 
+
 ## Pet
-### Retorna todos os Pets
+#### Retorna todos os Pets
 
     link: {base_url}/api/pets
     method: GET
